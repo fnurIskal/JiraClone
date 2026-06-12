@@ -1,5 +1,6 @@
 using JiraClone.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
+using JiraClone.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();
 
