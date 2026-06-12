@@ -18,6 +18,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddInfrastructureServices();
 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(JiraClone.Application.Features.Projects.Commands.CreateProject.CreateProjectCommand).Assembly));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

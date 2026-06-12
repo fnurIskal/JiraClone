@@ -19,8 +19,4 @@
     <ProjectReference Include="..\JiraClone.Infrastructure\JiraClone.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
